@@ -1,71 +1,85 @@
-# ELITE-CAREER
-A full-stack, AI-powered platform for professional career document writing services, built with Docker, Node.js, Express, and Vanilla JS.
+# Elite Career Platform
 
-EliteCareer - AI-Powered Career Services Platform
-A state-of-the-art, global platform for a premium, human-powered career document writing service, enriched with cutting-edge AI tools. This repository contains the full-stack code for a complete, enterprise-grade application, from the public-facing website to the secure client, writer, and admin portals.
+Elite Career Platform is a **state-of-the-art, global platform** for a premium, human-powered career document writing service. It combines the **human touch of expert writers** with **cutting-edge AI tools** to deliver CVs, cover letters, essays, and professional career materials of the highest quality.  
 
+The platform is designed to be **secure, scalable, and enterprise-ready**, targeting high-achieving professionals and clients from global organizations.  
 
-Project Status
-This project is a comprehensive showcase of a full-stack application. The code is made public for demonstration and portfolio purposes. At this time, the repository is not open to external contributions.
+---
 
-Key Features
-AI-Powered Analysis: Free, instant CV review tool using the Google Gemini API to provide a score and actionable feedback.
+## Features
 
-Dedicated User Portals:
+### Phase I: Public-Facing Website
+- **Homepage with Trust Builders**  
+  Hero section, social proof bar, services overview, top writer showcase, and testimonials.  
+- **Our Writers Gallery** with detailed bios, expertise tags, and professional photos.  
+- **Resource Center (Blog)** for SEO and thought leadership.  
+- **Free CV Analysis Tool (Lead Magnet)** powered by AI, capturing leads through email gating.  
 
-Client Dashboard: Manage orders, communicate directly with writers, and download final documents.
+### Phase II: AI-Powered Tools
+- **Instant CV Review** with score, positive points, and improvement tips.  
+- **AI First Draft Generator** for cover letters, essays, and more.  
 
-Writer Dashboard: View and accept assigned orders, manage workload, and communicate with clients.
+### Phase III: Client, Writer & Admin Portals
+- **Client Dashboard**: order tracking, messaging, file management, and secure authentication.  
+- **Writer Portal**: accept/decline orders, upload drafts, earnings dashboard.  
+- **Admin Portal**: full CRUD, analytics, order assignment, and content management.  
 
-Admin Dashboard: Full oversight of the platform with CRUD functionality for users, orders, and content.
+### Phase IV: Global Scalability
+- **Multi-language & multi-currency support** (USD, EUR, GBP).  
+- **Email notifications** for critical user actions.  
 
-Content & Resource Hub: A complete blog system to establish thought leadership and drive SEO.
+### Additional Enterprise-Grade Features
+- **Dockerized deployment & GitHub Actions CI/CD**  
+- **Structured logging (Winston/Pino)**  
+- **Advanced security**: JWT auth, bcrypt password hashing, Helmet, rate limiting, RBAC middleware  
+- **SEO & Accessibility compliance (A11y)**  
+- **Legal pages**: Terms, Privacy, Cookie Policy  
+- **Business intelligence**: MRR, CAC, LTV placeholders  
+- **Customer retention tools**: revision requests, feedback & ratings, coupons, automated invoicing, support ticket system  
 
-Secure & Scalable:
+---
 
-Authentication: JWT-based authentication with secure password hashing (bcryptjs).
+## Tech Stack
 
-Role-Based Access Control (RBAC): Distinct middleware secures routes for clients, writers, and admins.
+- **Frontend**: Vanilla JavaScript, HTML5, Tailwind CSS (SPA, `/public` directory)  
+- **Backend**: Node.js with Express.js  
+- **Database**: MongoDB with Mongoose  
+- **Authentication**: JWT-based secure login  
+- **File Handling**: Multer for uploads  
+- **External APIs**:  
+  - Google Gemini API (AI features)  
+  - Stripe/PayPal (payments, placeholder integration)  
+  - Nodemailer (transactional emails)  
 
-Enterprise-Grade Security: Includes security headers (helmet) and rate-limiting to prevent common attacks.
+---
 
-Containerized: A Dockerfile is included for easy, consistent deployment.
+## Project Structure
 
-Tech Stack
-Frontend: HTML5, Tailwind CSS, Vanilla JavaScript
-
-Backend: Node.js, Express.js
-
-Database: MongoDB with Mongoose
-
-Authentication: JSON Web Tokens (JWT)
-
-File Handling: Multer
-
-External APIs: Google Gemini API
-
-DevOps: Docker, GitHub Actions (for CI/CD)
-
-Project Structure
-The project is organized into two main directories: backend for the server-side application and public for all client-facing static files.
-
-elite-career-platform/
-│
-├── backend/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
+```
+Elite-Career-Platform/
+├── public/              # Frontend (HTML, CSS, JS)
+├── src/                 # Backend (Express.js code)
 │   ├── routes/
-│   ├── .env.example
-│   ├── Dockerfile
-│   ├── package.json
-│   └── server.js
-│
-├── public/
-│   ├── css/
-│   ├── js/
-│   ├── index.html
-│   └── ... (other html files)
-│
-└── README.md
+│   ├── controllers/
+│   ├── models/
+│   ├── middleware/
+│   └── utils/
+├── config/              # Config and environment setup
+├── database_schema.md   # Mongoose schema documentation
+├── .env.example         # Environment variable template
+├── Dockerfile           # Containerization
+├── package.json         # Dependencies
+└── README.md            # Project documentation
+```
+---
 
+## Documentation
+
+- **API Documentation**: Follows OpenAPI/Swagger standards (to be generated).  
+- **Database Schema**: See `database_schema.md`.  
+
+---
+
+## License
+This project is proprietary and developed for enterprise-grade deployment.  
+All rights reserved © Elite Career Platform.  
